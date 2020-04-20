@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\HP Envy x360\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\HP Envy x360\\.nuget\\packages"
+    ]
+  }
+}
