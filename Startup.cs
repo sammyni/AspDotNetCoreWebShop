@@ -1,3 +1,4 @@
+using System.Reflection;
 using System;
 
 using System.Linq;
@@ -27,7 +28,10 @@ namespace WebShop
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(options => options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+            // services.AddDbContext<AppDbContext>(options => options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
+            // services.AddDbContext<AppDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("Sqlite")));
+
+            services.AddDbContext<AppDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("Sqlite")));
 
             services.AddControllersWithViews();
             services.AddScoped<IPieRepository, PieRepository>();
