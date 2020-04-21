@@ -7,20 +7,39 @@
     <link  rel="stylesheet" type="text/css" href="~/lib/bootstrap/css/bootstrap.css" />
     <link  rel="stylesheet" type="text/css" href="~/custom/css/style.css" />
 
-</head>
-<body>
-    <div class="row">
-        <div class="col-md-3 px-5">
-            <p class="py-3">
-                <img class="img-fluid" alt="Logo" src="" />
-            </p>
-        </div>
-        <div class="col-md-9 p-5">
-            @RenderBody()
-        </div>
-    </div>
-    
     <script src="~/lib/jquery/jquery.js"></script>
     <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">WebShop</a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarsExample01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="pie" asp-action="list">Pies</a>
+                </li>
+            
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 px-5 py-md-5">
+                <p class="py-3 text-center">
+                    <img src="https://img.icons8.com/ios-filled/150/000000/c-sharp-logo.png"/>
+                </p>
+            </div>
+            <div class="col-md-9 p-5">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
 </body>
 </html>

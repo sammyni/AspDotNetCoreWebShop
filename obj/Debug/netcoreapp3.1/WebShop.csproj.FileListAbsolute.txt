@@ -161,3 +161,4 @@ C:\projects2\learn\AspDotNetCoreWebShop\bin\Debug\netcoreapp3.1\runtimes\win-arm
 C:\projects2\learn\AspDotNetCoreWebShop\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\projects2\learn\AspDotNetCoreWebShop\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\projects2\learn\AspDotNetCoreWebShop\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+C:\projects2\learn\AspDotNetCoreWebShop\obj\Debug\netcoreapp3.1\Razor\Views\Pie\Details.cshtml.g.cs

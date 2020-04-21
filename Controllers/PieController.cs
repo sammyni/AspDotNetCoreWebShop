@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using WebShop.Models;
 using WebShop.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebShop.Controllers
 {
@@ -25,10 +25,22 @@ namespace WebShop.Controllers
             ViewBag.CurrentCategory = "Cheese cakes";
 
             PieListViewModel pieLiistViewModel = new PieListViewModel();
-            pieLiistViewModel.Pies = _pieRepository.AllPies;
 
+            pieLiistViewModel.Pies = _pieRepository.AllPies;
             pieLiistViewModel.CurrentCategory = "Cheese cakes";
+
             return View(pieLiistViewModel);
+        }
+
+
+        public IActionResult Details(int id)
+        {
+            Pie pie = _pieRepository.GetPieById(id);
+
+            if (pie == null)
+                return NotFound();
+            return View(pie);
+
         }
         
     }
